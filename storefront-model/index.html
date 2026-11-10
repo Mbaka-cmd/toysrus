@@ -102,15 +102,7 @@ footer{background:var(--foot);padding:36px 0 18px}
 .pay{grid-template-columns:repeat(8,1fr)!important;gap:8px!important}.pay div{background:#f3f3f5!important;height:56px}.pay img{max-width:74%;max-height:28px;object-fit:contain;mix-blend-mode:multiply}
 .vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 @media (max-width:820px){.pay{grid-template-columns:repeat(4,1fr)!important}.logo img{height:30px}}
-.ddp{position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,.12);z-index:25;max-height:70vh;overflow:auto}
-.ddp[hidden]{display:none}
-.ddp .in{max-width:1110px;margin:0 auto;padding:16px 20px 20px;columns:3;column-gap:28px}.ddp .in>*{break-inside:avoid}
-.ddp.one .in{columns:1;max-width:340px;margin:0 0 0 max(0px,calc((100vw - 1110px)/2))}
-.ddp a{display:block;padding:8px 0;font-size:14px;font-weight:500;color:var(--link)}.ddp a:hover{color:var(--brand)}
-.ddp .sub{padding-left:14px;border-left:2px solid var(--line);margin:0 0 6px}.ddp .sub a{font-size:13px;padding:5px 0}
-.ddp .sub b{display:block;font-size:11px;text-transform:uppercase;color:var(--muted);margin:8px 0 2px}
-nav a[data-dd].on{color:var(--brand)}nav a[data-dd].on i{transform:rotate(225deg);margin-bottom:-2px}
-@media (max-width:820px){.ddp .in,.ddp.one .in{columns:1;max-width:none;margin:0}}.ddp{position:absolute;top:100%;background:var(--bg);box-shadow:0 10px 28px rgba(0,0,0,.2);z-index:25;display:flex;border:1px solid var(--line);border-top:0}
+.ddp{position:absolute;top:100%;background:var(--bg);box-shadow:0 10px 28px rgba(0,0,0,.2);z-index:25;display:flex;border:1px solid var(--line);border-top:0}
 .ddp[hidden]{display:none}
 .ddp:before{content:"";position:absolute;top:-8px;left:24px;border:8px solid transparent;border-top:0;border-bottom-color:var(--bg)}
 .ddp .l{min-width:300px;padding:14px 0;overflow-y:auto;max-height:calc(100vh - 150px)}
@@ -121,7 +113,7 @@ nav a[data-dd].on{color:var(--brand)}nav a[data-dd].on i{transform:rotate(225deg
 .ddp .r h4{margin:0 0 10px;font-size:16px;font-weight:600}.ddp .r a{display:block;padding:5px 0;font-size:14px;color:var(--link)}.ddp .r a:hover{color:var(--brand)}
 .ddp .r i{display:block;font-style:normal;font-size:11px;font-weight:700;text-transform:uppercase;color:var(--muted);margin:10px 0 2px}
 nav a[data-dd].on{text-decoration:underline}nav a[data-dd].on i{transform:rotate(225deg);margin-bottom:-2px}
-@media (max-width:820px){.ddp{left:0!important;right:0;flex-direction:column}.ddp .l{min-width:0}}#home[hidden],#bp[hidden]{display:none}
+@media (max-width:1024px){.ddp{left:0!important;right:0;flex-direction:column}.ddp .l{min-width:0}}#home[hidden],#bp[hidden]{display:none}
 #bp{padding:6px 0 40px}.bc{font-size:11px;color:var(--muted);margin:10px 0 6px}.bc a{color:var(--brand)}
 #bp h1{margin:6px 0 14px;font-size:22px;font-weight:800}
 .azn{display:flex;flex-wrap:wrap;gap:6px 16px;max-width:560px;margin-bottom:26px}
@@ -135,21 +127,50 @@ nav a[data-dd].on{text-decoration:underline}nav a[data-dd].on i{transform:rotate
 .al{display:grid;grid-template-columns:repeat(6,1fr);gap:14px 12px;padding:14px 10px 18px;font-size:12px}
 .al a{color:var(--fg);line-height:1.3}.al a:hover{color:var(--brand);text-decoration:underline}
 .bn{text-align:center;max-width:900px;margin:30px auto 0}.bn h3{color:var(--brand);margin:0 0 8px;font-size:20px}.bn p{margin:0;color:var(--link);font-size:15px}.bn p b{color:#4caf3c;font-weight:500}
-@media (max-width:820px){.fg,.al{grid-template-columns:repeat(2,1fr)}.fg a{height:56px}}</style>
+@media (max-width:820px){.fg,.al{grid-template-columns:repeat(2,1fr)}.fg a{height:56px}}#pp[hidden]{display:none}
+.pbn{position:relative;overflow:hidden;min-height:clamp(150px,16vw,230px);display:grid;align-items:center;justify-items:center;text-align:center;color:#fff;background:radial-gradient(circle at 80% 30%,#4a5fd0 0,transparent 40%),linear-gradient(180deg,#0f2a8a,#1a3fb8)}
+.pbn .tx h1{margin:0;font-size:clamp(28px,5vw,64px);line-height:.95;font-weight:800;text-transform:uppercase;letter-spacing:-.02em}.pbn .tx em{font-style:normal;color:#ffd400}.pbn .tx small{display:block;margin-top:8px;font-size:11px;font-weight:600}
+.pbn .bg,.pt .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.pbn.has .tx,.pt.has .tx{display:none}
+.pbn .pill{left:auto;right:3%;bottom:14%}
+.pts{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:6px}
+.pt{position:relative;overflow:hidden;border-radius:14px;height:clamp(200px,18vw,270px);background:var(--c);color:var(--t);display:grid;place-items:center;text-align:center;padding:14px 12px 60px}
+.pt h3{margin:0;font-size:clamp(22px,3.2vw,46px);line-height:.95;font-weight:800;text-transform:uppercase}.pt p{margin:8px 0 0;font-size:12px;font-weight:600}
+.pt .pill{left:50%;transform:translateX(-50%)}
+.ph{text-align:center;margin:34px 0 4px}.ph small{display:block;color:#4caf3c;font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase}.ph h2{margin:2px 0 0;font-size:clamp(26px,3vw,36px);font-weight:800}
+.va{display:block;text-align:right;color:var(--brand);font-weight:700;font-size:13px;margin:6px 4px 14px}
+#pp .card{flex-basis:calc(25% - 16.5px)}
+.tags{position:absolute;left:0;bottom:0;display:flex;gap:4px}.tg{background:#2e9e5b;color:#fff;font-size:9px;font-weight:700;padding:3px 7px;border-radius:5px}.tg.ex{background:#e5161d}
+.rv span.st{background:linear-gradient(90deg,#f5b301 var(--r),var(--star) var(--r));-webkit-background-clip:text;background-clip:text;color:transparent}.rv b{color:var(--fg);font-weight:600}
+@media (max-width:980px){#pp .card{flex-basis:calc(33.3% - 14.7px)}}
+@media (max-width:820px){.pts{grid-template-columns:repeat(2,1fr)}#pp .card{flex-basis:calc(50% - 6px)}}
+.util .ba{margin-left:0}.util .ba img{height:20px;display:block;mix-blend-mode:multiply}
+.mb{display:none;border:0;background:none;color:var(--fg);padding:6px;place-items:center}
+@media (max-width:1024px){
+.util{display:block}.util .wrap{padding:8px 20px;align-items:center}
+.mb{display:grid}.acts{gap:14px}.ac,.acts small,.acts .tx{display:none}
+.bar{flex-wrap:wrap;padding:12px 20px;gap:10px}.logo{margin-right:auto}.logo img{height:46px}
+.search{display:none;order:9;flex:1 0 100%}header.so .search{display:flex}
+nav{display:none;flex-direction:column;gap:0;overflow:visible;padding:0 20px 8px;border-top:1px solid var(--line)}
+header.mo nav{display:flex}nav a{padding:12px 0;font-size:15px;border-bottom:1px solid var(--line)}
+.card{flex-basis:calc(50% - 6px)}
+.rv{font-size:0}.rv span{font-size:16px}.rv b{display:none}
+.price{font-size:20px}.tile{flex-basis:44vw}
+}
+@media (max-width:820px){.tile{flex-basis:78vw}}</style>
 </head>
 <body>
 <a class="skip" href="#cats">Skip to Content</a>
-<div class="util"><div class="wrap"><span></span><span><a href="#">Stores</a><a href="#">Help</a></span></div></div>
+<div class="util"><div class="wrap"><a class="ba" href="#" aria-label="Babies R Us"><img src="images/babiesrus.jpg" alt="Babies R Us"></a><span><a href="#">Stores</a><a href="#">Help</a></span></div></div>
 <header>
  <div class="bar">
   <a class="logo" id="logo" href="#top">Toys R Us</a>
   <form class="search" role="search" id="sf"><input id="q" type="search" placeholder="The search for fun starts here…" aria-label="Search products"><button type="submit" aria-label="Search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M16 16l5 5"/></svg></button></form>
-  <div class="acts">
+  <div class="acts"><button type="button" class="mb" id="sTog" aria-label="Search"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M16 16l5 5"/></svg></button>
    <a class="ac" href="#"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3.2"/><path d="M5.8 18.5c1.6-2.6 3.9-3.6 6.2-3.6s4.6 1 6.2 3.6"/></svg><span class="tx"><small>My Account</small><b>Sign In or Register</b></span></a>
-   <button class="cartbtn" id="openCart" aria-label="Open cart"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2e9e5b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h3l2.4 12h11l2.2-8H6"/><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/></svg><span class="badge" id="count">0</span><span class="tx"><small>My Cart</small><b id="tot">KES 0</b></span></button>
+   <button class="cartbtn" id="openCart" aria-label="Open cart"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2e9e5b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h3l2.4 12h11l2.2-8H6"/><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/></svg><span class="badge" id="count">0</span><span class="tx"><small>My Cart</small><b id="tot">R 0.00</b></span></button><button type="button" class="mb" id="menuBtn" aria-label="Menu" aria-expanded="false"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
  </div>
- <nav aria-label="Main"><a href="#" data-dd="dept">Department<i></i></a><a href="#brands-az">Brands</a><a href="#featured" data-dd="trend">Trending<i></i></a><a class="hot" href="#deals" data-dd="promo">Promotions<i></i></a><a href="#">My Dream Box</a><a href="#gift">Gifting<i></i></a><a href="#">Rewards</a></nav><div class="ddp" id="dd" hidden></div>
+ <nav aria-label="Main"><a href="#" data-dd="dept">Department<i></i></a><a href="#brands-az">Brands</a><a href="#featured" data-dd="trend">Trending<i></i></a><a class="hot" href="#promotions" data-dd="promo">Promotions<i></i></a><a href="#">My Dream Box</a><a href="#gift">Gifting<i></i></a><a href="#">Rewards</a></nav><div class="ddp" id="dd" hidden></div>
 </header>
 <div class="strip" id="gift">Give the Gift of Choice <a href="#">Shop Gift Cards</a></div>
 
@@ -169,7 +190,7 @@ nav a[data-dd].on{text-decoration:underline}nav a[data-dd].on i{transform:rotate
 
 <section class="wrap"><div class="seo"><h2>Trending Now: Collectibles, Toys &amp; Fan Favorites</h2><p id="seo">Discover the latest trending toys and collectibles at Toys R Us. Explore Pokémon 30th Anniversary collectibles, Pokémon TCG: 30th Celebration cards, LEGO pre-orders, Formula 1 products, FIFA World Cup merchandise and other must-have new releases.</p><button id="more">Show more</button></div></section>
 
-</div><main id="bp" hidden><div class="wrap" id="bpin"></div></main>
+</div><main id="pp" hidden><div id="ppin"></div></main><main id="bp" hidden><div class="wrap" id="bpin"></div></main>
 <div class="pay" id="track"></div></div>
 
 <footer><div class="fcols">
@@ -186,13 +207,13 @@ nav a[data-dd].on{text-decoration:underline}nav a[data-dd].on i{transform:rotate
 <aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
  <div class="dh"><span>Your Cart</span><button id="closeCart" aria-label="Close cart">×</button></div>
  <div class="items" id="items"></div>
- <div class="df"><div class="row"><span>Subtotal</span><span id="sub">KES 0</span></div><button class="go" id="checkout">Proceed to Checkout</button></div>
+ <div class="df"><div class="row"><span>Subtotal</span><span id="sub">R 0.00</span></div><button class="go" id="checkout">Proceed to Checkout</button></div>
 </aside>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
 /* ===== EDIT THIS SECTION: store settings and catalogue ===== */
-var CUR="KES";
+var CUR="R";
 var SEO="Discover the latest trending toys and collectibles at Toys R Us. Explore Pokémon 30th Anniversary collectibles, Pokémon TCG: 30th Celebration cards, LEGO pre-orders, Formula 1 products, FIFA World Cup merchandise and other must-have new releases.";
 var DEPTS=["Gift Cards","Learning and Educational Toys","Soft Toys","Just Unpacked","Games and Puzzles","Outdoor Play"];
 var SV='<svg viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">';
@@ -230,7 +251,7 @@ var P2=[
 var P=P1.concat(P2);
 /* ===== end of edit section ===== */
 var $=function(s){return document.querySelector(s)};
-var fmt=function(n){return CUR+" "+n.toLocaleString("en-KE",{minimumFractionDigits:0,maximumFractionDigits:2})};
+var fmt=function(n){return CUR+" "+n.toLocaleString("en-KE",{minimumFractionDigits:2,maximumFractionDigits:2})};
 var cart={};try{cart=JSON.parse(localStorage.getItem("cart")||"{}")}catch(e){}
 function save(){try{localStorage.setItem("cart",JSON.stringify(cart))}catch(e){}}
 var LC=["#0b4fd6","#e5161d","#2e9e5b","#f59e0b","#7a3fd0"];
@@ -258,33 +279,21 @@ $("#openCart").onclick=function(){open(true)};$("#closeCart").onclick=$("#shade"
 document.addEventListener("keydown",function(e){if(e.key==="Escape")open(false)});
 var LNK="#featured";
 var DD={
-dept:["Just Unpacked","Featured Shops","Gift Cards","Trading Cards","LEGO","Pets","Action Play","Learning & Educational Toys",{t:"Baby & Toddler Toys",s:["Baby & Toddler Toys","Baby Toys","Toddler Toys","Early Learning Toys","Preschool","Junior Ride-ons","|Featured Brands","Peppa Pig","Thomas & Friends","Little People"]},"Dolls & Accessories","Beauty & Self-Care","Games & Puzzles","Pretend Play","Collectible Toys","Action Vehicles","Outdoor Play","Building Sets & Blocks","Soft Toys","Kids Electronics","Drones & Remote Control","Video Games","Bikes, Ride-ons & Wheel Goods","Musical Instruments","Party & Gifting","Kids Room & Accessories"],
-trend:["Trading Cards Shop","Fan Vault","Blind Boxes","Pre-Order","Movie Releases","LEGO Shop","Formula 1"],
-promo:["View All Deals","Christmas Shop","LEGO Black Friday","Black Friday","Clearance Deals"]};
-function ddHtml(k){return '<div class="in">'+DD[k].map(function(x){if(typeof x==="string")return '<a href="'+LNK+'">'+x+'</a>';return '<div><a href="'+LNK+'">'+x.t+'</a><div class="sub">'+x.s.map(function(s){return s.charAt(0)==="|"?'<b>'+s.slice(1)+'</b>':'<a href="'+LNK+'">'+s+'</a>'}).join("")+'</div></div>'}).join("")+'</div>'}
-var ddp=$("#dd"),ddOn=null;
-function ddClose(){ddp.hidden=true;ddOn=null;document.querySelectorAll("nav a[data-dd]").forEach(function(a){a.classList.remove("on")})}
-function ddOpen(a){var k=a.dataset.dd;ddClose();ddOn=k;ddp.innerHTML=ddHtml(k);ddp.className="ddp"+(k==="dept"?"":" one");ddp.hidden=false;a.classList.add("on")}
-document.querySelectorAll("nav a[data-dd]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();if(ddOn===a.dataset.dd)ddClose();else ddOpen(a)});a.addEventListener("mouseenter",function(){if(matchMedia("(hover:hover)").matches&&innerWidth>820)ddOpen(a)})});
-$("header").addEventListener("mouseleave",function(){if(matchMedia("(hover:hover)").matches)ddClose()});
-document.addEventListener("click",function(e){if(!e.target.closest("header")||e.target.closest(".ddp a"))ddClose()});
-document.addEventListener("keydown",function(e){if(e.key==="Escape")ddClose()});var LNK="#featured";
-var DD={
 dept:[{t:"Just Unpacked",n:1,b:1},{t:"Featured Shops",s:["Toys R Us Exclusive","Outdoor Shop","Pet Shop","Barbie Shop","Hot Wheels Shop","Beauty and Self-Care","Disney Shop","Geoffrey's Book Club","Nintendo Shop"]},"Gift Cards","Trading Cards","LEGO","Pets","Action Play","Learning & Educational Toys",{t:"Baby & Toddler Toys",s:["Baby & Toddler Toys","Baby Toys","Toddler Toys","Early Learning Toys","Preschool","Junior Ride-ons","|Featured Brands","Peppa Pig","Thomas & Friends","Little People"]},"Dolls & Accessories","Beauty & Self-Care","Games & Puzzles","Pretend Play","Collectible Toys","Action Vehicles","Outdoor Play","Building Sets & blocks","Soft Toys","Kids Electronics","Drones & Remote Control","Video Games","Bikes, Ride-ons & Wheel Goods","Musical Instruments","Party & Gifting","Kids Room & Accessories"],
 trend:["Trading Cards Shop","Fan Vault","Blind boxes",{t:"Pre-Order",n:1},{t:"Movie Releases",n:1},"LEGO Shop",{t:"Formula 1",n:1}],
-promo:["View All Deals","Christmas Shop","LEGO Black Friday","Black Friday","Clearance Deals"]};
+promo:[{t:"View All Deals",h:"#promotions"},{t:"Christmas Shop",h:"#promotions"},{t:"LEGO Black Friday",h:"#promotions"},{t:"Black Friday",h:"#promotions"},{t:"Clearance Deals",h:"#promotions"}]};
 var ddp=$("#dd"),ddOn=null,ddI=[];
-function hov(){return matchMedia("(hover:hover)").matches&&innerWidth>820}
+function hov(){return matchMedia("(hover:hover)").matches&&innerWidth>1024}
 function ddClose(){ddp.hidden=true;ddOn=null;document.querySelectorAll("nav a[data-dd]").forEach(function(a){a.classList.remove("on")})}
 function ddSub(i){var x=ddI[i],r=ddp.querySelector(".r");ddp.querySelectorAll(".l a").forEach(function(a){a.classList.toggle("on",a.dataset.i==i&&!!x.s)});
  if(!x.s){r.hidden=true;return}
  r.innerHTML='<h4>'+x.t+'</h4>'+x.s.map(function(s){return s.charAt(0)==="|"?'<i>'+s.slice(1)+'</i>':'<a href="'+LNK+'">'+s+'</a>'}).join("");r.hidden=false}
 function ddOpen(a){ddClose();var k=a.dataset.dd;ddOn=k;ddI=DD[k].map(function(x){return typeof x==="string"?{t:x}:x});
- ddp.innerHTML='<div class="l">'+ddI.map(function(x,i){return '<a href="'+LNK+'" data-i="'+i+'"'+(x.b?' class="nw"':'')+'>'+x.t+(x.n?'<em>New</em>':'')+(x.s?'<b>\u203a</b>':'')+'</a>'}).join("")+'</div><div class="r" hidden></div>';
+ ddp.innerHTML='<div class="l">'+ddI.map(function(x,i){return '<a href="'+(x.h||LNK)+'" data-i="'+i+'"'+(x.b?' class="nw"':'')+'>'+x.t+(x.n?'<em>New</em>':'')+(x.s?'<b>\u203a</b>':'')+'</a>'}).join("")+'</div><div class="r" hidden></div>';
  ddp.style.left=Math.max(8,a.getBoundingClientRect().left-$("header").getBoundingClientRect().left-4)+"px";ddp.hidden=false;a.classList.add("on")}
 ddp.addEventListener("mouseover",function(e){var a=e.target.closest(".l a");if(a)ddSub(a.dataset.i)});
 ddp.addEventListener("click",function(e){var a=e.target.closest(".l a");if(a&&ddI[a.dataset.i].s&&!hov()){e.preventDefault();ddSub(a.dataset.i)}});
-document.querySelectorAll("nav a[data-dd]").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();if(ddOn===a.dataset.dd)ddClose();else ddOpen(a)});a.addEventListener("mouseenter",function(){if(hov())ddOpen(a)})});
+document.querySelectorAll("nav a[data-dd]").forEach(function(a){a.addEventListener("click",function(e){if(a.dataset.dd==="promo"&&hov()){ddClose();return}e.preventDefault();if(ddOn===a.dataset.dd)ddClose();else ddOpen(a)});a.addEventListener("mouseenter",function(){if(hov())ddOpen(a)})});
 $("header").addEventListener("mouseleave",function(){if(hov())ddClose()});
 document.addEventListener("click",function(e){if(!e.target.closest("header")||e.target.closest(".ddp a[href]")&&!(e.defaultPrevented))ddClose()});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")ddClose()});var AZ={"0-9":"30SEC|4D Puzz|4M|5 Surprise|52 Toys",
@@ -310,11 +319,38 @@ S:"Sand Art|School Zone|Scooby Doo|Scrabble|Shimmer and Sparkle|Shyliing|Simba|S
 T:"Taiyo|Tamagotchi|Tech Deck|Teddy|Teenage Mutant Ninja Turtles|The learning Journey|Thomas|Tiny Teamsterz|Tiny Treasures|Top Model|Top Trumps|Totally Craft|Tower|Toycity|Toy Hub|Toys R Us|Toy Story|Transformers|TREFL|Topps|Tabasquishy",
 U:"Unicorn|Unicorn Academy|Uno|Upsetduck",V:"V-Tech|Volkano",W:"Weird Science|Whamo|Wild Quest|Winfun|Wow Generation|WWE",X:"X Shot|Xox Kweenie",Y:"YCOO|Ypernova|YU-GI-OH!|You & Me|Yummiland",Z:"Zimpli|Zing|Zingo|Zzoom"};
 var FB=[["Paw Patrol","#1e63c8"],["Barbie","#e0218a"],["LEGO",0,"b-lego.png"],["Squishmallows","#e8508a"],["Blokees",0,"b-blokees.png"],["Mini Brands","#e5338a"],["Hot Wheels",0,"b-hotwheels.png"],["Pok\u00e9mon",0,"b-pokemon.png"],["Nintendo Switch","#e60012"],["Rev Up","#222"],["Baby Bella","#e068a8"],["Panini",0,"b-panini.png"]]; /* add logos as images/b-xxx.png and set the 3rd value */
-var HOME=$("#home"),BP=$("#bp");
+var PR1=[
+{id:21,brand:"Reggies",name:"Reggies Mudslinger Extreme RC Rock Crawler",price:399.9,was:599.9,tags:["EXCLUSIVE"],rt:1.8,rv:5},
+{id:22,brand:"Reggies",name:"Reggies Classic Diecast Steam train",price:599.9,was:899.9,tags:["EXCLUSIVE"],rt:3,rv:2},
+{id:23,brand:"REGGIES AIRSTRIKE",name:"AIRSTRIKE CORNER MASTER",price:499.9,tags:["EXCLUSIVE"]},
+{id:24,brand:"Pets Alive",name:"Pets Alive Mommy Cappy And Baby Surprise",price:399.9,was:499.9}];
+var PR2=[
+{id:25,brand:"Reggies",name:"Reggies R/C Rev Up Twister Break Dancer Stunt Car",price:119.9,was:179.9,tags:["ASSORTED","EXCLUSIVE"],rt:4.3,rv:4},
+{id:26,brand:"Reggies",name:"Reggies Mudslinger Extreme RC Rock Crawler",price:399.9,was:599.9,tags:["EXCLUSIVE"],rt:1.8,rv:5},
+{id:27,brand:"Reggies",name:"Falcon X Folding Camera Drone",price:799.9,was:1299.9,tags:["EXCLUSIVE"],rt:3.7,rv:6},
+{id:28,brand:"REGGIES RACERS",name:"Reggies City Car Transporter",price:349.9,was:499.9,tags:["EXCLUSIVE"]}];
+P=P.concat(PR1,PR2);
+function pcard(p){var h=card(p),t=(p.tags||[]).map(function(x){return '<span class="tg'+(x==="EXCLUSIVE"?' ex':'')+'">'+x+'</span>'}).join("");
+ h=h.replace('</div><span class="brand">','<span class="tags">'+t+'</span></div><span class="brand">');
+ if(p.rt!=null)h=h.replace('<span>\u2605\u2605\u2605\u2605\u2605</span><i></i>0 Reviews','<span class="st" style="--r:'+(p.rt/5*100)+'%">\u2605\u2605\u2605\u2605\u2605</span><b>'+p.rt+'</b><i></i>'+p.rv+' Reviews');
+ return h}
+var PT1=[["Bring color into your Black Friday","LEGO","#0b0b0f","#ffd400"],["Clearance Blast","Up to 50% off","#e0212b","#fff"],["Delta Reign","Pok\u00e9mon TCG","#2a6b2a","#ffe14d"],["Top Toys","The toys topping every wish list","#b5121f","#ffe9a8"]];
+var PT2=[["Great Value","Geoffrey-Approved Prices!","#67b84a","#15602a"],["Exclusive to Toys R Us","*you won\u2019t find these anywhere else","#2b2a8f","#fff"],["For the Big Kids","Fan Vault favourites","#12c4f0","#0b1f3a"],["Stocking Fillers","The Little Things They\u2019ll LOVE","#f08cc0","#c4137c"]];
+var PB=[["Paw Patrol","#ffe600",0,"#1e63c8"],["Barbie","#ee3c93",0,"#fff"],["LEGO","#ffe600","b-lego.png"],["Panini","#111","b-panini.png"],["Nintendo Switch","#eeeeef",0,"#e60012"],["Mini Brands","#8a63c6",0,"#fff"],["Reggies Racers","#8fb3ea",0,"#c46a00"],["Pok\u00e9mon","#e5161d","b-pokemon.png"]]; /* optional art: images/promo-banner.jpg and images/promo-1.jpg ... promo-8.jpg */
+function ptiles(a,o){return '<div class="pts">'+a.map(function(t,i){return '<a class="pt" href="#featured" style="--c:'+t[2]+';--t:'+t[3]+'"><img class="bg" src="images/promo-'+(o+i)+'.jpg" alt="" onload="this.parentNode.classList.add(\'has\')" onerror="this.remove()"><div class="tx"><h3>'+t[0]+'</h3><p>'+t[1]+'</p></div><span class="pill">Shop Now <b>\u203a</b></span></a>'}).join("")+'</div>'}
+function psec(e,t,l,id){return '<div class="wrap"><div class="ph"><small>'+e+'</small><h2>'+t+'</h2></div><a class="va" href="#featured">'+l+' \u2192</a><div class="car"><button class="nb l" data-d="-1" aria-label="Previous">\u2039</button><div class="track" id="'+id+'"></div><button class="nb r" data-d="1" aria-label="Next">\u203a</button></div></div>'}
+var PP=$("#pp");
+$("#ppin").innerHTML='<section class="pbn"><img class="bg" src="images/promo-banner.jpg" alt="" onload="this.parentNode.classList.add(\'has\')" onerror="this.remove()"><div class="tx"><h1>Unwrap our best <em>festive</em> deals</h1><small>22 October 2026 - 3 January 2027</small></div><a class="pill" href="#featured">Shop All Deals <b>\u203a</b></a></section>'+ptiles(PT1,1)+psec("Big savings","Top Festive Toys","View All Deals","t3")+ptiles(PT2,5)+psec("Something truly special","Exclusive Deals","View All","t4")+'<div class="wrap"><div class="ph"><small>The Rolls Royce of toys</small><h2>Our TOP Brands</h2></div><a class="va" href="#brands-az">View All Brands \u2192</a><div class="brands" style="margin-top:0">'+PB.map(function(b){return '<a class="bt" href="#featured" aria-label="'+b[0]+'" style="background:'+b[1]+';color:'+(b[3]||"#111")+'">'+(b[2]?'<img src="images/'+b[2]+'" alt="'+b[0]+'">':b[0])+'</a>'}).join("")+'</div></div>';
+$("#t3").innerHTML=PR1.map(pcard).join("");$("#t4").innerHTML=PR2.map(pcard).join("");
+PP.querySelectorAll(".nb").forEach(function(b){b.onclick=function(){b.parentNode.querySelector(".track").scrollBy({left:b.dataset.d*520,behavior:"smooth"})}});
+$("#sTog").onclick=function(){var h=$("header");h.classList.toggle("so");if(h.classList.contains("so"))$("#q").focus()};
+$("#menuBtn").onclick=function(){var h=$("header");h.classList.toggle("mo");this.setAttribute("aria-expanded",h.classList.contains("mo"))};
+document.querySelector("nav").addEventListener("click",function(e){if(e.target.closest("a:not([data-dd])"))$("header").classList.remove("mo")});
+$("#dd").addEventListener("click",function(e){if(e.target.closest("a[href]")&&!e.defaultPrevented)$("header").classList.remove("mo")});var HOME=$("#home"),BP=$("#bp");
 $("#bpin").innerHTML='<div class="bc"><a href="#top">Home</a> / Brands</div><h1>Brands</h1><div class="azn">'+Object.keys(AZ).map(function(k){return '<button type="button" data-az="'+k+'">'+k+'</button>'}).join("")+'</div><h2 class="fh">Featured Brands</h2><div class="fg">'+FB.map(function(f){return '<a href="#featured" aria-label="'+f[0]+'">'+(f[2]?'<img src="images/'+f[2]+'" alt="'+f[0]+'">':'<span style="color:'+f[1]+'">'+f[0]+'</span>')+'</a>'}).join("")+'</div>'+Object.keys(AZ).map(function(k){return '<h2 class="az" id="az-'+k+'">'+k+'</h2><div class="al">'+AZ[k].split("|").map(function(n){return '<a href="#featured">'+n+'</a>'}).join("")+'</div>'}).join("")+'<div class="bn"><h3>Shop the brands kids love</h3><p>From <b>Barbie</b> and <b>Hot Wheels</b> to LEGO, <b>PAW Patrol</b> and <b>Pok\u00e9mon</b>, all your favourite toy brands live here. Browse A to Z or jump straight to the names on your child\u2019s wish list.</p></div>';
 BP.addEventListener("click",function(e){var b=e.target.closest("[data-az]");if(b)document.getElementById("az-"+b.dataset.az).scrollIntoView({behavior:"smooth",block:"start"})});
-function route(){var on=location.hash==="#brands-az";HOME.hidden=on;BP.hidden=!on;document.title=on?"Brands | Toys R Us":"Toys R Us | Online Shop";if(on)window.scrollTo(0,0)}
-window.addEventListener("hashchange",function(){route();if(location.hash!=="#brands-az"){var t=document.getElementById(location.hash.slice(1));if(t)setTimeout(function(){t.scrollIntoView()},0)}});
+function route(){var h=location.hash,b=h==="#brands-az",pr=h==="#promotions";HOME.hidden=b||pr;BP.hidden=!b;PP.hidden=!pr;document.title=b?"Brands | Toys R Us":pr?"Promotions | Toys R Us":"Toys R Us | Online Shop";if(b||pr)window.scrollTo(0,0)}
+window.addEventListener("hashchange",function(){route();if(location.hash!=="#brands-az"&&location.hash!=="#promotions"){var t=document.getElementById(location.hash.slice(1));if(t)setTimeout(function(){t.scrollIntoView()},0)}});
 route();$("#up").onclick=function(){window.scrollTo({top:0,behavior:"smooth"})};
 $("#checkout").onclick=function(){toast("Checkout is the next build step")};
 $("#sf").onsubmit=function(e){e.preventDefault();var q=$("#q").value.trim().toLowerCase();
