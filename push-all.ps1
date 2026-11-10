@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Continue'
-Set-Location (if ($PSScriptRoot) { $PSScriptRoot } else { (Get-Location).Path })
+if ($PSScriptRoot) { Set-Location $PSScriptRoot }
 if (-not (Test-Path .git)) { git init }
 if (-not (git config user.name))  { git config --global user.name "Mercy Mbaka" }
 if (-not (git config user.email)) { git config --global user.email "official.mercymbaka@gmail.com" }
