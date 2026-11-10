@@ -156,7 +156,8 @@ header.mo nav{display:flex}nav a{padding:12px 0;font-size:15px;border-bottom:1px
 .rv{font-size:0}.rv span{font-size:16px}.rv b{display:none}
 .price{font-size:20px}.tile{flex-basis:44vw}
 }
-@media (max-width:820px){.tile{flex-basis:78vw}}</style>
+@media (max-width:820px){.tile{flex-basis:78vw}}.vid{position:relative;overflow:hidden}.vid .vbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.vid.has .t,.vid.has .c,.vid.has .w,.vid.has .play svg{opacity:0}.vid.has .play{background:transparent}
+@media (min-width:1025px) and (max-width:1180px){.card{flex-basis:calc(25% - 12px)}}</style>
 </head>
 <body>
 <a class="skip" href="#cats">Skip to Content</a>
@@ -181,8 +182,8 @@ header.mo nav{display:flex}nav a{padding:12px 0;font-size:15px;border-bottom:1px
 
 <section class="sec" id="featured"><div class="wrap"><h2>Let’s Kick it!</h2><div class="car"><button class="nb l" data-d="-1" aria-label="Previous">‹</button><div class="track" id="t1"></div><button class="nb r" data-d="1" aria-label="Next">›</button></div></div></section>
 
-<section class="wrap" style="padding-top:26px"><div class="feat"><div class="vid" aria-label="Video placeholder"><span class="t">Toy Story 5 | Official Trailer</span><div class="play" id="play" role="button" tabindex="0" aria-label="Play trailer"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M6 3l13 8-13 8z" fill="#fff"/></svg></div><span class="c">OFFICIAL TRAILER</span><span class="w">Watch video</span></div>
- <div><h3>Sneak Peek: Toy Story Meets Tech</h3><p>Woody, Buzz, Jessie and the rest of the gang are back, but this time playtime looks very different. In Toy Story 5, the toys face an all-new challenge as technology begins to compete with traditional play, putting their purpose at risk.</p><p>As they go head-to-head with this modern threat, the team must adapt, stick together, and rediscover what it truly means to be there for their kid. Packed with heart, humor, and adventure, this next chapter brings a fresh twist to the beloved Toy Story journey.</p></div></div></section>
+<section class="wrap" style="padding-top:26px"><div class="feat"><div class="vid" aria-label="Video placeholder"><img class="vbg" src="images/trailer.jpg" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()"><span class="t">Toy Story 5 | Official Trailer</span><div class="play" id="play" role="button" tabindex="0" aria-label="Play trailer"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M6 3l13 8-13 8z" fill="#fff"/></svg></div><span class="c">OFFICIAL TRAILER</span><span class="w">Watch video</span></div>
+ <div><h3>Sneak Peek: Toy Meets Tech</h3><p>Woody, Buzz, Jessie and the rest of the gang are back, but this time playtime looks very different. In Toy Story 5, the toys face an all-new challenge as technology begins to compete with traditional play, putting their purpose at risk.</p><p>As they go head-to-head with this modern threat, the team must adapt, stick together, and rediscover what it truly means to be there for their kid. Packed with heart, humor, and adventure, this next chapter brings a fresh twist to the beloved Toy Story journey.</p></div></div></section>
 
 <section class="sec" id="deals"><div class="wrap"><h2>Shop Toy Story</h2><div class="car"><button class="nb l" data-d="-1" aria-label="Previous">‹</button><div class="track" id="t2"></div><button class="nb r" data-d="1" aria-label="Next">›</button></div></div></section>
 
@@ -196,7 +197,7 @@ header.mo nav{display:flex}nav a{padding:12px 0;font-size:15px;border-bottom:1px
 <footer><div class="fcols">
 <div><b>Shop</b><a href="#">Gift Card</a><a href="#">Gift Card Balance Check</a><a href="#">Find a Store</a><a href="#">Black Friday</a></div>
 <div><b>Help</b><a href="#">Contact Us</a><a href="#">FAQ</a><a href="#">Shipping &amp; Delivery</a><a href="#">Exchanges &amp; Returns</a><a href="#">Payment Options</a></div>
-<div><b>Account</b><a href="#">Rewards</a><a href="#">My Account</a><a href="#">Track Order</a><a href="#">Upload Payment Proof</a><a href="#">Personal Details</a><a href="#">My Orders</a></div>
+<div><b>Account</b><a href="#">Rewards R Us</a><a href="#">My Account</a><a href="#">Track Order</a><a href="#">Upload Payment Proof</a><a href="#">Personal Details</a><a href="#">My Orders</a></div>
 <div><b>Company</b><a href="#">About Us</a><a href="#">Careers</a><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
 </div><div class="copy">Copyright © 2026 Toys R Us. All rights reserved.<a href="#">Cookie Preferences</a></div></footer>
 
@@ -227,7 +228,7 @@ var CATS=[
 var IMGS=["blind-boxes","fifa","f1","trading-cards","unlock-preorders"];
 var STORE="Toys R Us",LOGO="store-logo.png";
 var VIDEO_ID=""; /* paste the YouTube trailer ID here to enable the trailer */
-var BRANDS=[["LEGO","#ffe500","b-lego.png"],["Burago","#efeff2","b-burago.png"],["Panini","#111","b-panini.png"],["Pokemon","#e5161d","b-pokemon.png"],["Hot Wheels","#1366d6","b-hotwheels.png"],["Blokees","#f6e9c4","b-blokees.png"],["52Toys","#efae44","b-52toys.png"]];
+var BRANDS=[["LEGO","#ffe500","b-lego.png"],["Burago","#efeff2","b-burago.png"],["Panini","#111","b-panini.png"],["Pokemon","#e5161d","b-pokemon.png"],["Blokees","#f6e9c4","b-blokees.png"],["Hot Wheels","#1366d6","b-hotwheels.png"],["Happy Haul","#14b3bd","b-happyhaul.jpg"],["52Toys","#efae44","b-52toys.png"]];
 var PAY=[["Visa","pay-visa.jpg"],["Mastercard","pay-mastercard.jpg"],["Mobicred","pay-mobicred.jpg"],["Ozow","pay-ozow.jpg"],["Payflex","pay-payflex.jpg"],["PayJustNow","pay-payjustnow.jpg"],["Peach Payments","pay-peach.jpg"],["Happy Pay","pay-happypay.jpg"]]; /* trim to the methods you really accept */
 /* ids 11+ use PLACEHOLDER prices: set the real ones */
 var P1=[
@@ -240,11 +241,11 @@ var P1=[
  {id:12,brand:"LEGO",name:"LEGO\u00ae Editions Lionel Messi Football Legend Set (43015)",price:1599.9,img:"p-messi-legend.jpg"},
  {id:13,brand:"TOPPS",name:"Match Attax Champions League Trading Card",price:99.9,img:"p-match-attax.jpg"}];
 var P2=[
- {id:6,brand:"LEGO",name:"LEGO\u00ae Disney and Pixar Toy Story Slinky Dog Bookends",price:2999.9,img:"p-slinky.jpg"},
- {id:7,brand:"TOY STORY",name:"Wow Palm Puppertronics Toy Story Jessie",price:999.9,img:"p-jessie.jpg"},
+ {id:6,brand:"LEGO",name:"LEGO\u00ae Disney and Pixar Toy Story Slinky Dog Bookends (43301)",price:2999.9,img:"p-slinky.jpg"},
+ {id:7,brand:"Toy Story",name:"Wow Palm Puppertronics Toy Story Jessie",price:999.9,img:"p-jessie.jpg"},
  {id:8,brand:"LEGO",name:"LEGO\u00ae Disney and Pixar Toy Story 5 Blaze's Horse Ranch (43304)",price:949.9,img:"p-horse-ranch.jpg"},
  {id:9,brand:"JURASSIC WORLD",name:"Disney Pixar Toy Story 5 Play Scale Story Pack",price:849.9,img:"no-image.jpg"},
- {id:10,brand:"TOY STORY",name:"Toy Story Wow Palm Puppertronics Buzz Light Year",price:799.9,was:999.9,img:"p-buzz.jpg"},
+ {id:10,brand:"Toy Story",name:"Toy Story Wow Palm Puppertronics Buzz Light Year",price:799.9,was:999.9,img:"p-buzz.jpg"},
  {id:14,brand:"LEGO",name:"LEGO\u00ae Disney Lots-o'-Huggin' Bear (43306)",price:1499.9,img:"p-lotso.jpg"},
  {id:15,brand:"DISNEY PIXAR",name:"Disney Pixar Plush Woody",price:899.9,img:"p-woody.jpg"},
  {id:16,brand:"DISNEY PIXAR",name:"Disney Pixar Plush Buzz Lightyear",price:899.9,img:"p-lightyear.jpg"}];
