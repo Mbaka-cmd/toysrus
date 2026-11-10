@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Toys R Us | Online Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#fff;--fg:#14171f;--link:#3b4150;--muted:#6b7280;--card:#fff;--line:#e6e8ee;--soft:#f1f2f6;--foot:#f7f7f8;--brand:#0b4fd6;--onbrand:#fff;--sale:#d10f2f;--star:#cfd3dc;
+--b1:#ffe500;--b2:#efeff2;--b3:#111;--b4:#e5161d;--b5:#f6e9c4;--b6:#1366d6;--b7:#14b0b0;--b8:#efae44}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1118;--fg:#eceff6;--link:#c8cedb;--muted:#9aa3b5;--card:#161a24;--line:#262c3a;--soft:#1a1f2c;--foot:#141824;--brand:#4b86ff;--sale:#ff5a73;--star:#444b5c;--b2:#2a2e3a;--b5:#4a4328}}
+:root[data-theme="dark"]{--bg:#0e1118;--fg:#eceff6;--link:#c8cedb;--muted:#9aa3b5;--card:#161a24;--line:#262c3a;--soft:#1a1f2c;--foot:#141824;--brand:#4b86ff;--sale:#ff5a73;--star:#444b5c;--b2:#2a2e3a;--b5:#4a4328}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 "Poppins",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.wrap{max-width:1110px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:0}.skip:focus{left:8px;top:8px;z-index:99;background:var(--bg);padding:8px 12px;border-radius:8px}
+.util{background:var(--soft);font-size:11px;color:var(--muted)}.util .wrap{display:flex;justify-content:space-between;padding:5px 20px}.util a{font-weight:600;margin-left:14px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:28px;padding:14px 20px 8px;max-width:1110px;margin:0 auto}
+.logo{font-weight:800;font-size:30px;letter-spacing:-1px;line-height:1;white-space:nowrap}
+.search{flex:1;display:flex;background:var(--soft);border-radius:999px;padding:0 8px 0 20px;border:1px solid transparent;height:44px;align-items:center}
+.search:focus-within{border-color:var(--brand)}
+.search input{flex:1;border:0;background:none;color:var(--fg);font:inherit;outline:0;min-width:0}
+.search input::placeholder{color:var(--muted)}
+.search button{border:0;background:none;color:var(--brand);display:grid;place-items:center;padding:6px}
+.acts{display:flex;gap:26px;align-items:center;line-height:1.15}
+.acts small{display:block;font-size:10.5px;color:var(--muted)}.acts b{font-size:11px;font-weight:700}
+.ac{display:flex;gap:10px;align-items:center;color:var(--fg)}
+.cartbtn{border:0;background:none;color:inherit;display:flex;gap:10px;align-items:center;text-align:left;padding:0;position:relative}
+.badge{position:absolute;left:14px;top:-8px;background:var(--brand);color:#fff;border-radius:999px;min-width:18px;height:18px;display:grid;place-items:center;font-size:10px;font-weight:700}
+nav{max-width:1110px;margin:0 auto;padding:0 20px;display:flex;gap:30px;overflow-x:auto;font-size:13px;font-weight:600;scrollbar-width:none}
+nav a{padding:8px 0 12px;white-space:nowrap}nav a.hot{color:var(--sale)}
+nav i{display:inline-block;border:solid currentColor;border-width:0 2px 2px 0;padding:2.4px;transform:rotate(45deg);margin:0 0 3px 7px}
+.strip{background:var(--brand);color:#fff;text-align:center;font-size:13px;padding:9px 12px;font-weight:500}.strip a{text-decoration:underline;font-weight:700;margin-left:6px}
+.hero{position:relative;overflow:hidden;color:#fff;min-height:clamp(150px,16.7vw,300px);display:flex;align-items:center;background:radial-gradient(60% 130% at 100% 0,#18cff5 0,transparent 62%),radial-gradient(45% 100% at 0 100%,#0a3fb8,transparent 70%),#0b56dc}
+.hero svg{position:absolute;left:0;bottom:0;height:100%;width:26vw;fill:#2f7cff;opacity:.85}
+.hero .in{position:relative;padding:0 5.5vw;display:flex;align-items:center;gap:2.4vw;width:100%}
+.hero h1{margin:0;font-size:clamp(52px,10.6vw,170px);line-height:.85;font-weight:800;letter-spacing:-.04em}
+.hero p{margin:0;font-size:clamp(16px,2.35vw,40px);font-weight:500;line-height:1.2}
+.tiles{display:flex;gap:6px;overflow-x:auto;padding:6px;scroll-snap-type:x mandatory;scrollbar-width:none}.tiles::-webkit-scrollbar{display:none}
+.tile{position:relative;flex:0 0 calc(24% - 4px);height:clamp(200px,17vw,260px);border-radius:14px;color:#fff;overflow:hidden;scroll-snap-align:start;
+ background:radial-gradient(120% 90% at 100% 0,var(--c2) 0 34%,transparent 35%),radial-gradient(90% 70% at 25% 135%,var(--c3) 0 46%,transparent 47%),var(--c1)}
+.tile .ti{position:absolute;left:7%;top:16%;width:46%}.tile .ti svg{width:100%;height:auto;display:block}
+.tile h3{position:absolute;left:56%;right:4%;top:36%;margin:0;font-size:clamp(18px,2vw,30px);line-height:1.05;font-weight:800;text-transform:uppercase}
+.pill{position:absolute;left:5%;bottom:7%;background:#fff;color:#14171f;border-radius:999px;padding:9px 18px;font-size:12px;font-weight:700;min-width:140px;display:flex;justify-content:space-between}
+.sec{padding:34px 0 10px}.sec h2{text-align:center;margin:0 0 20px;font-size:21px;font-weight:700}
+.car{position:relative;--gap:22px}
+.track{display:flex;gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px}.track::-webkit-scrollbar{display:none}
+.card{position:relative;flex:0 0 calc(20% - 17.6px);background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px 12px 16px;scroll-snap-align:start;display:flex;flex-direction:column;gap:5px}
+.card:hover{box-shadow:0 6px 18px rgba(0,0,0,.1)}
+.img{position:relative;aspect-ratio:1/.95;border-radius:10px;display:grid;place-items:center;font-size:11px;color:var(--muted);background:var(--soft);margin-bottom:6px}
+.tag{position:absolute;left:0;bottom:0;background:#2e9e5b;color:#fff;font-size:9px;font-weight:700;padding:3px 7px;border-radius:5px}.tag.x{background:#6b7280}
+.brand{font-size:10.5px;font-weight:700;color:var(--brand);text-transform:uppercase}
+.name{font-size:13px;line-height:1.5;min-height:3em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rv{display:flex;align-items:center;gap:8px;font-size:10.5px;font-weight:600;color:var(--brand);margin:2px 0 4px}.rv span{color:var(--star);font-size:13px;letter-spacing:1px}.rv i{width:4px;height:4px;border-radius:50%;background:var(--fg)}
+.price{font-weight:700;font-size:15px}.price.sale{color:var(--sale)}.price s{color:var(--muted);font-weight:500;font-size:11px;margin-left:6px}
+.add{position:absolute;right:20px;top:calc(50% - 4px);transform:translateY(-100%);width:38px;height:38px;border-radius:50%;border:0;background:var(--brand);color:#fff;font-size:22px;line-height:1;opacity:0;transition:opacity .15s}
+.card:hover .add,.add:focus-visible{opacity:1}@media (hover:none){.add{opacity:1}}
+.nb{position:absolute;top:44%;width:38px;height:38px;border-radius:50%;border:0;background:var(--brand);color:#fff;font-size:20px;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.nb.l{left:-19px}.nb.r{right:-19px}
+.feat{display:grid;grid-template-columns:1.08fr 1fr;gap:30px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:22px}
+.vid{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;color:#fff;display:grid;place-items:center;background:radial-gradient(70% 90% at 90% 90%,#7b2fa8,transparent),linear-gradient(135deg,#17224a,#2a2f7a)}
+.vid .t{position:absolute;left:16px;top:12px;font-weight:700;font-size:14px}.vid .c{position:absolute;left:16px;bottom:12px;font-weight:800;font-size:clamp(20px,3vw,36px)}.vid .w{position:absolute;right:16px;bottom:16px;font-size:12px;font-weight:600}
+.play{width:68px;height:48px;background:#e5161d;border-radius:14px;display:grid;place-items:center}
+.feat h3{margin:0 0 12px;text-align:center;font-size:19px;font-weight:600}.feat p{color:var(--link);text-align:center;margin:0 0 12px;font-size:14px;line-height:1.7}
+.brands{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:1010px;margin:34px auto 0}
+.bt{flex:0 0 234px;height:76px;border-radius:14px;display:grid;place-items:center;font-weight:800;font-size:20px;color:#14171f}
+.seo{text-align:center;max-width:1000px;margin:0 auto;padding:30px 0 10px}.seo h2{margin:0 0 8px;font-size:20px;font-weight:700}.seo p{margin:0 0 6px;color:var(--link);font-size:15px}
+.seo button{border:0;background:none;color:var(--brand);font-weight:700;font-size:14px}
+.pay{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:0 6px;margin:34px 0 0}
+.pay div{background:var(--soft);height:58px;display:grid;place-items:center;font-size:13px;font-weight:700;color:var(--muted);border-radius:4px}
+footer{background:var(--foot);padding:36px 0 18px}
+.fcols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;font-size:14px;max-width:900px;margin:0 auto;padding:0 20px}
+.fcols b{display:block;margin-bottom:10px}.fcols a{display:block;color:var(--link);padding:8px 0}
+.copy{text-align:center;color:var(--link);font-size:11px;margin-top:22px}.copy a{color:var(--fg);text-decoration:underline;font-weight:700;margin-left:14px;font-size:13px}
+.up{position:fixed;right:24px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:30;width:52px;height:52px;border-radius:50%;border:0;background:var(--brand);color:#fff;display:grid;place-items:center}
+.up svg.s{position:absolute;left:36px;top:46px;width:14px;height:44px;stroke:var(--brand);fill:none;stroke-width:2}
+.help{position:fixed;right:0;bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:30;writing-mode:vertical-rl;transform:rotate(180deg);background:var(--bg);color:var(--brand);border:2px solid var(--brand);border-left:0;border-radius:0 14px 14px 0;padding:16px 8px;font-weight:700;font-size:12px}
+.shade{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}.shade.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(400px,100%);background:var(--bg);z-index:50;transform:translateX(100%);transition:transform .25s;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);border-left:1px solid var(--line)}.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:700}.dh button{border:0;background:none;color:var(--fg);font-size:22px}
+.items{flex:1;overflow:auto;padding:8px 20px}
+.it{display:grid;grid-template-columns:56px 1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:center;font-size:13px}.it .img{margin:0;aspect-ratio:1}
+.qty{display:flex;gap:8px;align-items:center;margin-top:6px}.qty button{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--fg)}
+.rm{border:0;background:none;color:var(--sale);font-size:12px}
+.df{padding:16px 20px;border-top:1px solid var(--line)}.df .row{display:flex;justify-content:space-between;font-weight:700;margin-bottom:12px}
+.go{width:100%;border:0;background:var(--brand);color:#fff;border-radius:999px;padding:13px;font-weight:700}.go[disabled]{opacity:.5}
+.empty{color:var(--muted);text-align:center;padding:30px 0}.empty p{margin:8px 0}.dl{display:block;padding:6px 0;color:var(--brand);font-weight:600}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,40px);background:var(--fg);color:var(--bg);padding:10px 18px;border-radius:999px;font-size:13px;opacity:0;transition:.25s;z-index:60}.toast.on{opacity:1;transform:translate(-50%,0)}
+.tile .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.tile.has .ti,.tile.has h3{display:none}
+.hero .hbg{display:none}.hero.has{display:block;min-height:0}.hero.has .hbg{display:block;width:100%;height:auto}.hero.has svg{display:none}.hero.has .in{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);padding:0}
+@media (max-width:980px){.card{flex-basis:calc(33.3% - 14.7px)}}
+@media (max-width:820px){.car{--gap:12px}.card{flex-basis:calc(50% - 6px)}.acts small,.acts .tx{display:none}.feat{grid-template-columns:1fr}.fcols,.pay{grid-template-columns:repeat(2,1fr)}.nb,.util{display:none}.bar{gap:12px}.tile{flex-basis:78vw}.logo{font-size:22px}.hero .in{flex-direction:column;align-items:flex-start;gap:8px;padding:24px 20px}.hero svg{width:60vw}.bt{flex-basis:calc(50% - 7px)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.img img{width:100%;height:100%;object-fit:contain;border-radius:10px;display:block}.img.has{background:#fff}.it .img.has{border:1px solid var(--line)}
+.logo img{height:42px;width:auto;display:block}.bt img{max-width:78%;max-height:68%;object-fit:contain}
+.pay{grid-template-columns:repeat(8,1fr)!important;gap:8px!important}.pay div{background:#f3f3f5!important;height:56px}.pay img{max-width:74%;max-height:28px;object-fit:contain;mix-blend-mode:multiply}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (max-width:820px){.pay{grid-template-columns:repeat(4,1fr)!important}.logo img{height:30px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#cats">Skip to Content</a>
+<div class="util"><div class="wrap"><span></span><span><a href="#">Stores</a><a href="#">Help</a></span></div></div>
+<header>
+ <div class="bar">
+  <a class="logo" id="logo" href="#top">Toys R Us</a>
+  <form class="search" role="search" id="sf"><input id="q" type="search" placeholder="The search for fun starts here…" aria-label="Search products"><button type="submit" aria-label="Search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M16 16l5 5"/></svg></button></form>
+  <div class="acts">
+   <a class="ac" href="#"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3.2"/><path d="M5.8 18.5c1.6-2.6 3.9-3.6 6.2-3.6s4.6 1 6.2 3.6"/></svg><span class="tx"><small>My Account</small><b>Sign In or Register</b></span></a>
+   <button class="cartbtn" id="openCart" aria-label="Open cart"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2e9e5b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h3l2.4 12h11l2.2-8H6"/><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/></svg><span class="badge" id="count">0</span><span class="tx"><small>My Cart</small><b id="tot">KES 0</b></span></button>
+  </div>
+ </div>
+ <nav aria-label="Main"><a href="#cats">Department<i></i></a><a href="#brands">Brands</a><a href="#featured">Trending<i></i></a><a class="hot" href="#deals">Promotions<i></i></a><a href="#">My Dream Box</a><a href="#gift">Gifting<i></i></a><a href="#">Rewards</a></nav>
+</header>
+<div class="strip" id="gift">Give the Gift of Choice <a href="#">Shop Gift Cards</a></div>
+
+<section class="hero" id="top"><img class="hbg" src="images/trending.jpg" alt="" onload="this.parentNode.classList.add('has')" onerror="this.remove()"><svg viewBox="0 0 300 240" aria-hidden="true"><path d="M30 120l8 18 20 2-15 13 5 20-18-10-18 10 5-20L2 140l20-2z"/><path d="M100 170l6 14 15 2-11 10 4 15-14-8-14 8 4-15-11-10 15-2z"/><path d="M170 215l5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1z"/><path d="M215 140l4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1z"/></svg>
+<div class="in"><h1>TRENDING</h1><p>The Latest.<br>The Greatest.<br>The Most Wanted.</p></div></section>
+
+<div class="tiles" id="cats"></div>
+
+<section class="sec" id="featured"><div class="wrap"><h2>Let’s Kick it!</h2><div class="car"><button class="nb l" data-d="-1" aria-label="Previous">‹</button><div class="track" id="t1"></div><button class="nb r" data-d="1" aria-label="Next">›</button></div></div></section>
+
+<section class="wrap" style="padding-top:26px"><div class="feat"><div class="vid" aria-label="Video placeholder"><span class="t">Toy Story 5 | Official Trailer</span><div class="play" id="play" role="button" tabindex="0" aria-label="Play trailer"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M6 3l13 8-13 8z" fill="#fff"/></svg></div><span class="c">OFFICIAL TRAILER</span><span class="w">Watch video</span></div>
+ <div><h3>Sneak Peek: Toy Story Meets Tech</h3><p>Woody, Buzz, Jessie and the rest of the gang are back, but this time playtime looks very different. In Toy Story 5, the toys face an all-new challenge as technology begins to compete with traditional play, putting their purpose at risk.</p><p>As they go head-to-head with this modern threat, the team must adapt, stick together, and rediscover what it truly means to be there for their kid. Packed with heart, humor, and adventure, this next chapter brings a fresh twist to the beloved Toy Story journey.</p></div></div></section>
+
+<section class="sec" id="deals"><div class="wrap"><h2>Shop Toy Story</h2><div class="car"><button class="nb l" data-d="-1" aria-label="Previous">‹</button><div class="track" id="t2"></div><button class="nb r" data-d="1" aria-label="Next">›</button></div></div></section>
+
+<section class="wrap" id="brands"><div class="brands" id="bgrid"></div></section>
+
+<section class="wrap"><div class="seo"><h2>Trending Now: Collectibles, Toys &amp; Fan Favorites</h2><p id="seo">Discover the latest trending toys and collectibles at Toys R Us. Explore Pokémon 30th Anniversary collectibles, Pokémon TCG: 30th Celebration cards, LEGO pre-orders, Formula 1 products, FIFA World Cup merchandise and other must-have new releases.</p><button id="more">Show more</button></div></section>
+
+<div class="pay" id="track"></div></div>
+
+<footer><div class="fcols">
+<div><b>Shop</b><a href="#">Gift Card</a><a href="#">Gift Card Balance Check</a><a href="#">Find a Store</a><a href="#">Black Friday</a></div>
+<div><b>Help</b><a href="#">Contact Us</a><a href="#">FAQ</a><a href="#">Shipping &amp; Delivery</a><a href="#">Exchanges &amp; Returns</a><a href="#">Payment Options</a></div>
+<div><b>Account</b><a href="#">Rewards</a><a href="#">My Account</a><a href="#">Track Order</a><a href="#">Upload Payment Proof</a><a href="#">Personal Details</a><a href="#">My Orders</a></div>
+<div><b>Company</b><a href="#">About Us</a><a href="#">Careers</a><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+</div><div class="copy">Copyright © 2026 Toys R Us. All rights reserved.<a href="#">Cookie Preferences</a></div></footer>
+
+<button class="up" id="up" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg><svg class="s" viewBox="0 0 14 44"><path d="M2 0c10 12-8 20 4 30s2 10 4 14"/></svg></button>
+<a class="help" href="#">Need Help?</a>
+
+<div class="shade" id="shade"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+ <div class="dh"><span>Your Cart</span><button id="closeCart" aria-label="Close cart">×</button></div>
+ <div class="items" id="items"></div>
+ <div class="df"><div class="row"><span>Subtotal</span><span id="sub">KES 0</span></div><button class="go" id="checkout">Proceed to Checkout</button></div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ===== EDIT THIS SECTION: store settings and catalogue ===== */
+var CUR="KES";
+var SEO="Discover the latest trending toys and collectibles at Toys R Us. Explore Pokémon 30th Anniversary collectibles, Pokémon TCG: 30th Celebration cards, LEGO pre-orders, Formula 1 products, FIFA World Cup merchandise and other must-have new releases.";
+var DEPTS=["Gift Cards","Learning and Educational Toys","Soft Toys","Just Unpacked","Games and Puzzles","Outdoor Play"];
+var SV='<svg viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">';
+var CATS=[
+ ["Blind Boxes","#d9480a","#a83200","#ff6a0f",SV+'<path d="M50 8l38 20v44L50 92 12 72V28z"/><path d="M12 28l38 20 38-20M50 48v44"/></svg>'],
+ ["FIFA World Cup","#3aa02a","#1f7a14","#5cc13a",SV+'<circle cx="50" cy="50" r="40"/><path d="M50 30l17 12-6 20H39l-6-20z"/></svg>'],
+ ["Formula 1","#b0102a","#7a0018","#d42a45",'<svg viewBox="0 0 100 100" fill="#fff"><path d="M4 72L68 28h28L32 72zM26 90l52-36h14L40 90z"/></svg>'],
+ ["Trading Cards","#1b63d8","#0a3fb0","#2a87ff",SV+'<rect x="22" y="8" width="56" height="84" rx="8"/><path d="M36 66l14-22 14 22z"/></svg>'],
+ ["Unlock Pre-orders","#d98a00","#b06a00","#f3a81a",SV+'<path d="M50 8l12 28 30 3-23 20 7 30-26-16-26 16 7-30L8 39l30-3z"/></svg>']
+];
+var IMGS=["blind-boxes","fifa","f1","trading-cards","unlock-preorders"];
+var STORE="Toys R Us",LOGO="store-logo.png";
+var VIDEO_ID=""; /* paste the YouTube trailer ID here to enable the trailer */
+var BRANDS=[["LEGO","#ffe500","b-lego.png"],["Burago","#efeff2","b-burago.png"],["Panini","#111","b-panini.png"],["Pokemon","#e5161d","b-pokemon.png"],["Hot Wheels","#1366d6","b-hotwheels.png"],["Blokees","#f6e9c4","b-blokees.png"],["52Toys","#efae44","b-52toys.png"]];
+var PAY=[["Visa","pay-visa.jpg"],["Mastercard","pay-mastercard.jpg"],["Mobicred","pay-mobicred.jpg"],["Ozow","pay-ozow.jpg"],["Payflex","pay-payflex.jpg"],["PayJustNow","pay-payjustnow.jpg"],["Peach Payments","pay-peach.jpg"],["Happy Pay","pay-happypay.jpg"]]; /* trim to the methods you really accept */
+/* ids 11+ use PLACEHOLDER prices: set the real ones */
+var P1=[
+ {id:1,brand:"LEGO",name:"LEGO\u00ae Editions Mini Stadium Football (43019)",price:2399.9,img:"p-stadium.jpg"},
+ {id:2,brand:"SMASHERS",name:"FIFA WORLD CUP 2026\u2122 Ballers Series 1 Capsule",price:299.9,tag:"ASSORTED",img:"p-ballers.jpg"},
+ {id:3,brand:"LEGO",name:"LEGO\u00ae Editions Cristiano Ronaldo Football Highlights (43012)",price:549.9,was:559.9,img:"p-ronaldo-highlights.jpg"},
+ {id:4,brand:"PANINI",name:"Panini FIFA World Cup 2026\u2122 Trading Cards Classic Tin",price:519.9,img:"p-panini-tin.jpg"},
+ {id:5,brand:"LEGO",name:"LEGO\u00ae Editions Cristiano Ronaldo Football Legend Set (43016)",price:1599.9,img:"p-ronaldo-legend.jpg"},
+ {id:11,brand:"LEGO",name:"LEGO\u00ae Editions Lionel Messi Football Highlights (43011)",price:549.9,img:"p-messi-highlights.jpg"},
+ {id:12,brand:"LEGO",name:"LEGO\u00ae Editions Lionel Messi Football Legend Set (43015)",price:1599.9,img:"p-messi-legend.jpg"},
+ {id:13,brand:"TOPPS",name:"Match Attax Champions League Trading Card",price:99.9,img:"p-match-attax.jpg"}];
+var P2=[
+ {id:6,brand:"LEGO",name:"LEGO\u00ae Disney and Pixar Toy Story Slinky Dog Bookends",price:2999.9,img:"p-slinky.jpg"},
+ {id:7,brand:"TOY STORY",name:"Wow Palm Puppertronics Toy Story Jessie",price:999.9,img:"p-jessie.jpg"},
+ {id:8,brand:"LEGO",name:"LEGO\u00ae Disney and Pixar Toy Story 5 Blaze's Horse Ranch (43304)",price:949.9,img:"p-horse-ranch.jpg"},
+ {id:9,brand:"JURASSIC WORLD",name:"Disney Pixar Toy Story 5 Play Scale Story Pack",price:849.9,img:"no-image.jpg"},
+ {id:10,brand:"TOY STORY",name:"Toy Story Wow Palm Puppertronics Buzz Light Year",price:799.9,was:999.9,img:"p-buzz.jpg"},
+ {id:14,brand:"LEGO",name:"LEGO\u00ae Disney Lots-o'-Huggin' Bear (43306)",price:1499.9,img:"p-lotso.jpg"},
+ {id:15,brand:"DISNEY PIXAR",name:"Disney Pixar Plush Woody",price:899.9,img:"p-woody.jpg"},
+ {id:16,brand:"DISNEY PIXAR",name:"Disney Pixar Plush Buzz Lightyear",price:899.9,img:"p-lightyear.jpg"}];
+var P=P1.concat(P2);
+/* ===== end of edit section ===== */
+var $=function(s){return document.querySelector(s)};
+var fmt=function(n){return CUR+" "+n.toLocaleString("en-KE",{minimumFractionDigits:0,maximumFractionDigits:2})};
+var cart={};try{cart=JSON.parse(localStorage.getItem("cart")||"{}")}catch(e){}
+function save(){try{localStorage.setItem("cart",JSON.stringify(cart))}catch(e){}}
+var LC=["#0b4fd6","#e5161d","#2e9e5b","#f59e0b","#7a3fd0"];
+if(LOGO){$("#logo").innerHTML='<img src="images/'+LOGO+'" alt="'+STORE+'" onerror="this.parentNode.textContent=STORE">'}else $("#logo").innerHTML=STORE.split("").map(function(c,i){return c===" "?" ":'<span style="color:'+LC[i%5]+'">'+c+'</span>'}).join("");
+function card(p){return '<article class="card"><div class="img'+(p.img?' has':'')+'">'+(p.img?'<img src="images/'+p.img+'" alt="" loading="lazy">':"Product image")+(p.out?'<span class="tag x">UNAVAILABLE</span>':p.tag?'<span class="tag">'+p.tag+'</span>':'')+'</div><span class="brand">'+p.brand+'</span><div class="name">'+p.name+'</div><div class="rv"><span>★★★★★</span><i></i>0 Reviews</div><div class="price'+(p.was?' sale':'')+'">'+fmt(p.price)+(p.was?'<s>'+fmt(p.was)+'</s>':'')+'</div>'+(p.out?'':'<button class="add" data-id="'+p.id+'" aria-label="Add '+p.name+' to cart">+</button>')+'</article>'}
+function render(list,el){el.innerHTML=list.map(card).join("")}
+render(P1,$("#t1"));render(P2,$("#t2"));
+$("#cats").innerHTML=CATS.map(function(c,i){return '<a class="tile" href="#featured" aria-label="'+c[0]+'" style="--c1:'+c[1]+';--c2:'+c[2]+';--c3:'+c[3]+'"><img class="bg" src="images/'+IMGS[i]+'.jpg" alt="" onload="this.parentNode.classList.add(\'has\')" onerror="this.remove()"><div class="ti">'+c[4]+'</div><h3>'+c[0]+'</h3><span class="pill">Shop Now <b>›</b></span></a>'}).join("");
+$("#track").innerHTML=PAY.map(function(p){return '<div><img src="images/'+p[1]+'" alt="'+p[0]+'"></div>'}).join("");
+$("#bgrid").innerHTML=BRANDS.map(function(b){return '<a class="bt" href="#featured" aria-label="'+b[0]+'" style="background:'+b[1]+'"><img src="images/'+b[2]+'" alt="'+b[0]+'"></a>'}).join("");
+document.querySelectorAll(".nb").forEach(function(b){b.onclick=function(){b.parentNode.querySelector(".track").scrollBy({left:b.dataset.d*520,behavior:"smooth"})}});
+function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(toast.h);toast.h=setTimeout(function(){t.classList.remove("on")},1800)}
+function paint(){var ids=Object.keys(cart),n=0,s=0,h="";
+ ids.forEach(function(id){var p=P.find(function(x){return x.id==id});if(!p)return;var q=cart[id];n+=q;s+=q*p.price;
+  h+='<div class="it"><div class="img'+(p.img?' has':'')+'">'+(p.img?'<img src="images/'+p.img+'" alt="">':"")+'</div><div><b>'+p.name+'</b><div class="qty"><button data-m="'+id+'" aria-label="Decrease">−</button><span>'+q+'</span><button data-p="'+id+'" aria-label="Increase">+</button></div></div><div style="text-align:right">'+fmt(q*p.price)+'<br><button class="rm" data-r="'+id+'">Remove</button></div></div>'});
+ $("#items").innerHTML=h||'<div class="empty"><p><b>Your Cart</b></p><p>It seems like your cart could use some Toys!<br>Let’s help you find something to add.</p><p>Browse our Categories:</p>'+DEPTS.map(function(d){return '<a class="dl" href="#featured"><small style="color:var(--muted);font-weight:500;margin-right:8px">Shop</small>'+d+'</a>'}).join('')+'<p><a class="dl" href="#top">Continue Shopping</a></p></div>';
+ $("#count").textContent=n;$("#tot").textContent=fmt(s);$("#sub").textContent=fmt(s);$("#checkout").disabled=!n;save()}
+function open(o){$("#drawer").classList.toggle("on",o);$("#shade").classList.toggle("on",o);$("#drawer").setAttribute("aria-hidden",!o)}
+document.addEventListener("click",function(e){var b=e.target.closest("[data-id],[data-p],[data-m],[data-r]");if(!b)return;var d=b.dataset;
+ if(d.id){cart[d.id]=(cart[d.id]||0)+1;paint();toast("Added to cart")}
+ if(d.p){cart[d.p]++;paint()}
+ if(d.m){if(--cart[d.m]<1)delete cart[d.m];paint()}
+ if(d.r){delete cart[d.r];paint()}});
+$("#openCart").onclick=function(){open(true)};$("#closeCart").onclick=$("#shade").onclick=function(){open(false)};
+document.addEventListener("keydown",function(e){if(e.key==="Escape")open(false)});
+$("#up").onclick=function(){window.scrollTo({top:0,behavior:"smooth"})};
+$("#checkout").onclick=function(){toast("Checkout is the next build step")};
+$("#sf").onsubmit=function(e){e.preventDefault();var q=$("#q").value.trim().toLowerCase();
+ var r=q?P.filter(function(p){return (p.name+p.brand).toLowerCase().indexOf(q)>-1}):P1;
+ render(r,$("#t1"));$("#featured h2").textContent=q?(r.length+' result(s) for “'+$("#q").value.trim()+'”'):"Let’s Kick it!";$("#featured").scrollIntoView({behavior:"smooth"})};
+$("#play").onclick=function(){if(!VIDEO_ID){toast("Add the trailer video ID to enable playback");return}var v=this.parentNode;v.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+VIDEO_ID+'?autoplay=1" allow="autoplay;encrypted-media;fullscreen" allowfullscreen title="Trailer"></iframe>'};
+var full=false;$("#more").onclick=function(){full=!full;$("#seo").textContent=full?SEO+" Choose your items, check out on our website, pay by bank transfer, upload your proof of payment against your order reference, then follow your order status from your account until it arrives.":SEO;this.textContent=full?"Show less":"Show more"};
+paint();
+</script>
+</body>
+</html>
